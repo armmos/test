@@ -131,4 +131,18 @@ interface Reader
      * @return \Route
      */
     public function getRoute(): \Route;
+
+    /**
+     * Метод должен возвращать URL запроса.
+     * 
+     * @return string
+     */
+    public function getURL(): string;
+
+    /**
+     * Метод должен возвращать URI запроса.
+     * 
+     * @return string
+     */
+    public function getURI(): string;
 }
