@@ -5,7 +5,7 @@ namespace HTTP\Request;
 /**
  * Интерфейс реализует методы для получения параметров HTTP запроса
  * 
- * @version 1.0
+ * @version 1.3
  * @package \HTTP\Request
  */
 interface Reader
