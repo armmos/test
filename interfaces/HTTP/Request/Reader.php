@@ -101,33 +101,34 @@ interface Reader
      * @return string
      */
     public function getScript(bool $fullpath = false): string;
-    
-    
+
     /**
      * Метод должен возвращать IP адрес клиента от которого пришёл запрос.
      * 
      * @return string
      */
-    public function getClientIP():string;
-    
+    public function getClientIP(): string;
+
     /**
-     * Метод должен возвращать IP адрес хоста на который пришёл запрос.
+     * Метод должен возвращать значение заголовка HTTP_USER_AGENT.
+     * 
+     * @uses \HTTP\Request::getHeader($name) - для получения значения заголовка
      * 
      * @return string
      */
-    public function getServerIP():string;
-    
+    public function getClientUserAgent(): string;
+
     /**
-     * Метод должен возвращать HTTP_USER_AGENT клиента от которого пришёл запрос
+     * Метод должен возвращать тип устройства.
      * 
-     * @return string
+     * @return string - (pc|mobile|tablet|bot|console)
      */
-    public function getClientUserAgent():string;
-    
+    public function getClientDeviceType(): string;
+
     /**
-     * Метод должен возвращать название типа устройства.
+     * Метод должен возвращать искомый маршрут.
      * 
-     * @return string
+     * @return \Route
      */
-    public function getClientDeviceTypeName(): string;
+    public function getRoute(): \Route;
 }
